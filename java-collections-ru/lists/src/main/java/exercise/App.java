@@ -1,7 +1,6 @@
 package exercise;
 
 import java.util.Arrays;
-import java.util.ArrayList;
 import java.util.List;
 
 // BEGIN
@@ -17,7 +16,7 @@ public class App {
                 return false;
             }
         }
+        return true; 
     }
-    return true;
 }
-//END
+// END
