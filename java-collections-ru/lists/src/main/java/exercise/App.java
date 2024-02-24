@@ -1,5 +1,6 @@
 package exercise;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -9,14 +10,17 @@ public class App {
         String lowerCaseWord = word.toLowerCase();
         String lowerCaseLetters = letters.toLowerCase();
 
-        List<Character> letterList = Arrays.asList(lowerCaseLetters.chars().mapToObj(c -> (char) c).toArray(Character[]::new));
+        List<Character> letterList = new ArrayList<>();
+        for (char c : lowerCaseLetters.toCharArray()) {
+            letterList.add(c);
+        }
 
         for (char c : lowerCaseWord.toCharArray()) {
             if (!letterList.remove(Character.valueOf(c))) {
                 return false;
             }
         }
-        return true; 
+        return true;
     }
 }
 // END
