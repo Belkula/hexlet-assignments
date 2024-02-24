@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 // BEGIN
+
 public class App {
     public static Map<String, Integer> getWordCount(String sentence) {
         Map<String, Integer> wordCount = new HashMap<>();
