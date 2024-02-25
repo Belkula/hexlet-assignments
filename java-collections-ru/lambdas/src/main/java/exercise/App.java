@@ -8,7 +8,7 @@ public class App {
         return Arrays.stream(image)
                 .flatMap(row -> Arrays.stream(row)
                         .flatMap(pixel -> Arrays.stream(new String[]{pixel, pixel})))
-                .toArray(String[][]::new);
+                .toArray(size -> new String[image.length * 2][image[0].length * 2]);
     }
 }
 // END
