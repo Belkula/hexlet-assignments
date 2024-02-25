@@ -10,15 +10,15 @@ public class App {
 
         String[][] enlargedImage = new String[numRows * 2][numCols * 2];
 
-        IntStream.range(0, numRows).forEach(i -> {
-            IntStream.range(0, numCols).forEach(j -> {
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j < numCols; j++) {
                 String pixel = image[i][j];
                 enlargedImage[2 * i][2 * j] = pixel;
                 enlargedImage[2 * i][2 * j + 1] = pixel;
                 enlargedImage[2 * i + 1][2 * j] = pixel;
                 enlargedImage[2 * i + 1][2 * j + 1] = pixel;
-            });
-        });
+            }
+        }
 
         return enlargedImage;
     }
