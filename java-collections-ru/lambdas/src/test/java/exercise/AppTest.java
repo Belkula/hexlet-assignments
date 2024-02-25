@@ -28,7 +28,7 @@ class AppTest {
 
         String[][] result = App.enlargeArrayImage(image);
 
-        assertThat(result).isEqualTo(expected);
+        assertArrayEquals(expected, result);
     }
 }
 // END
