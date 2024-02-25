@@ -26,7 +26,9 @@ class AppTest {
                 {"*", "*", "*", "*", "*", "*", "*", "*"},
         };
 
-        assertThat(App.enlargeArrayImage(image)).isEqualTo(expected);
+        String[][] result = App.enlargeArrayImage(image);
+
+        assertThat(result).isEqualTo(expected);
     }
 }
 // END
