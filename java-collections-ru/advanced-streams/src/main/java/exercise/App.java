@@ -16,7 +16,7 @@ public class App {
                         .map(variable -> {
                             String[] keyValue = variable.split("=");
                             if (keyValue.length == 2) {
-                                return keyValue[0].substring("X_FORWARDED_".length());
+                                return keyValue[0].substring("X_FORWARDED_".length()) + "=" + keyValue[1];
                             }
                             return "";
                         })
