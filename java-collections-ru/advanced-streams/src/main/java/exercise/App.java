@@ -27,5 +27,4 @@ public class App {
                 .collect(Collectors.joining(","));
     }
 }
-In this revised ve
 //END
