@@ -60,7 +60,7 @@ class AppTest {
     @Test
     void testToString() {
         CharSequence text = new ReversedSequence("abcdef");
-        assertEquals("fedcba", text.toString());
+		assertThat(text.toString()).isEqualTo("fedcba");
     }
     // END
 }
