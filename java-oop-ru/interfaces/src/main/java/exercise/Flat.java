@@ -33,7 +33,7 @@ public class Flat implements Home {
                 return 0;
             }
         }
-        return -2; 
+        return -2;
     }
 }
 // END

@@ -31,7 +31,7 @@ public class Cottage implements Home {
                 return 0;
             }
         }
-        return -2; 
+        return -2;
     }
 }
 // END
