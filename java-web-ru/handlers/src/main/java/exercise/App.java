@@ -20,7 +20,7 @@ public final class App {
 
         app.get("/getDomains", ctx -> {
             List<String> domains = Data.getDomains();
-           ctx.json(domains);
+            ctx.json(domains);
         });
 
                 // Возвращаем настроенное приложение
