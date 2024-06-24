@@ -13,12 +13,12 @@ public final class App {
             config.bundledPlugins.enableDevLogging();
         });
 
-        app.get("/getPhones", ctx -> {
+        app.get("/phones", ctx -> {
             List<String> phones = Data.getPhones();
             ctx.json(phones);
         });
 
-        app.get("/getDomains", ctx -> {
+        app.get("/domains", ctx -> {
             List<String> domains = Data.getDomains();
             ctx.json(domains);
         });
