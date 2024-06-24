@@ -8,23 +8,23 @@ public final class App {
     public static Javalin getApp() {
 
         // BEGIN
-                // Создаем приложение
-                var app = Javalin.create(config -> {
-                    config.bundledPlugins.enableDevLogging();
-                });
+        // Создаем приложение
+        var app = Javalin.create(config -> {
+        config.bundledPlugins.enableDevLogging();
+        });
         
-                app.get("/getPhones", ctx -> {
-                    List<String> phones = Data.getPhones();
-                    ctx.json(phones);
-                });
-        
-                app.get("/getDomains", ctx -> {
-                    List<String> domains = Data.getDomains();
-                    ctx.json(domains);
-                });
-        
+        app.get("/getPhones", ctx -> {
+        List<String> phones = Data.getPhones();
+        ctx.json(phones);
+        });
+
+        app.get("/getDomains", ctx -> {
+        List<String> domains = Data.getDomains();
+        ctx.json(domains);
+        });
+
                 // Возвращаем настроенное приложение
-                return app;
+        return app;
         // END
     }
 
