@@ -1,0 +1,1 @@
+@template.layout.page(content = @`testing content`, title = "homepage")
