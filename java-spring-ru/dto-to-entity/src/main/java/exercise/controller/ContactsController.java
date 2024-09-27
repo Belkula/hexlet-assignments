@@ -21,22 +21,16 @@ public class ContactsController {
     private ContactRepository contactRepository;
 
     // BEGIN
-    @PostMapping("")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public ContactDTO create(@RequestBody ContactCreateDTO contactCreateDTO) {
-        Contact contact = toContact(contactCreateDTO);
-        contactRepository.save(contact);
-        return toContactDto(contact);
-    }
-
-    private Contact toContact(ContactCreateDTO contactCreateDTO) {
+    public ContactDTO createContact(@RequestBody ContactCreateDTO contactCreateDTO) {
         Contact contact = new Contact();
         contact.setFirstName(contactCreateDTO.getFirstName());
         contact.setLastName(contactCreateDTO.getLastName());
         contact.setPhone(contactCreateDTO.getPhone());
-        return contact;
-    }
-    private ContactDTO toContactDto(Contact contact) {
+
+        contactRepository.save(contact); // This will trigger the auditing
+
         ContactDTO contactDTO = new ContactDTO();
         contactDTO.setId(contact.getId());
         contactDTO.setFirstName(contact.getFirstName());
@@ -44,6 +38,7 @@ public class ContactsController {
         contactDTO.setPhone(contact.getPhone());
         contactDTO.setCreatedAt(contact.getCreatedAt());
         contactDTO.setUpdatedAt(contact.getUpdatedAt());
+
         return contactDTO;
     }
     // END
