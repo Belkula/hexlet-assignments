@@ -63,7 +63,7 @@ public class AppTest {
     void testGetPerson() throws Exception {
         MockHttpServletResponse response = mockMvc
                 .perform(
-                        get("/people/{id}", 1)
+                        get("/people/{id}", 2)
                 )
                 .andReturn()
                 .getResponse();
